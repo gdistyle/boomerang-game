@@ -656,15 +656,48 @@ function suitFront(g,su,hr,hy){const c=SUITC[su];g.save();g.strokeStyle=INK;
 const IMG={};let imgLeft=0;
 function charImg(id,v){const k=id+'_'+v;if(!IMG[k]){const im=new Image();imgLeft++;im.onload=im.onerror=()=>{if(--imgLeft===0){try{renderChars()}catch(e){}try{renderGacha()}catch(e){}}};im.src='chars/'+k+'.webp';IMG[k]=im}return IMG[k]}
 CHARS.forEach(c=>{charImg(c.id,'front');charImg(c.id,'side')});
+const FACE={"bamtol_front":[[0.385,0.3621,0.0381],[0.6268,0.3602,0.0371],"#f9d5b6",[0.5059,0.4277,0.0977],0.8857],"bamtol_side":[[0.5525,0.354,0.0381],[0.769,0.3482,0.0332],"#fcddbf",[0.6607,0.4202,0.0762],0.8857],"binggeul_front":[[0.339,0.295,0.0449],[0.665,0.2949,0.0439],"#f7ddc7",[0.502,0.5273,0.0587],0.8857],"binggeul_side":[[0.5055,0.3018,0.0439],[0.7761,0.3021,0.0439],"#fce3cc",[0.6408,0.4373,0.0677],0.8857],"bori_front":[[0.3805,0.299,0.042],[0.6435,0.3014,0.042],"#f7dbc4",[0.512,0.3672,0.0996],0.8857],"bori_side":[[0.5031,0.3005,0.041],[0.7431,0.2959,0.041],"#fbe0c8",[0.6231,0.3652,0.084],0.8857],"byeolbam_front":[[0.3692,0.3131,0.0469],[0.6474,0.31,0.0469],"#f5d5ba",[0.5083,0.4506,0.0696],0.8857],"byeolbam_side":[[0.4885,0.3072,0.0469],[0.7289,0.297,0.0459],"#faddc3",[0.6087,0.4223,0.0601],0.8857],"chalrang_front":[[0.3681,0.2679,0.0391],[0.6239,0.2628,0.0391],"#e7c3a8",[0.496,0.3403,0.1074],0.8857],"chalrang_side":[[0.5711,0.2518,0.0391],[0.7899,0.2483,0.0381],"#eecaaf",[0.6805,0.3252,0.0664],0.8857],"damdam_front":[[0.3856,0.3201,0.0498],[0.6391,0.3216,0.0449],"#efdcc7",[0.5123,0.3984,0.0996],0.8857],"damdam_side":[[0.5039,0.3261,0.0469],[0.7187,0.3209,0.0391],"#f0dec9",[0.6113,0.3984,0.0762],0.8857],"dongdong_front":[[0.3654,0.3575,0.04],[0.632,0.357,0.04],"#fcd194",[0.4987,0.4375,0.0684],0.8857],"dongdong_side":[[0.5135,0.35,0.041],[0.7345,0.3329,0.0381],"#fddba3",[0.624,0.4219,0.0918],0.8857],"dotori_front":[[0.3693,0.2969,0.041],[0.6311,0.2962,0.042],"#b88160",[0.5002,0.4824,0.1367],0.8857],"dotori_side":[[0.5112,0.2992,0.042],[0.7347,0.2926,0.04],"#c08663",[0.623,0.4512,0.0508],0.8857],"gyulnyang_front":[[0.3506,0.3811,0.0469],[0.6293,0.3788,0.0449],"#f0b98b",[0.4899,0.4453,0.0502],0.8857],"gyulnyang_side":[[0.5618,0.4009,0.0479],[0.8093,0.402,0.0449],"#f9c493",[0.6855,0.4707,0.0859],0.884],"ipsae_front":[[0.4827,0.4355,0.0088],[0.5287,0.4348,0.0078],"#bca289",[0.5057,0.4648,0.0117],0.8877],"ipsae_side":[[0.5138,0.3689,0.04],[0.749,0.3553,0.0391],"#d2baad",[0.6314,0.4551,0.0801],0.8857],"kkulbom_front":[[0.3476,0.3196,0.043],[0.6414,0.3142,0.043],"#fabca6",[0.4945,0.4336,0.0801],0.8857],"kongkong_front":[[0.3591,0.2917,0.042],[0.6398,0.2914,0.042],"#f7d7b9",[0.4995,0.4883,0.0879],0.8857],"kongkong_side":[[0.5242,0.304,0.042],[0.7558,0.3019,0.0391],"#fcdcbd",[0.64,0.377,0.0723],0.8857],"kori_front":[[0.3686,0.2957,0.04],[0.6253,0.2968,0.04],"#c9c2c8",[0.497,0.4246,0.0642],0.8857],"moa_front":[[0.3981,0.3755,0.0312],[0.6187,0.3746,0.0303],"#f3d4b7",[0.5084,0.4512,0.084],0.8857],"moa_side":[[0.4866,0.3739,0.0293],[0.6817,0.3748,0.0264],"#fadabc",[0.5841,0.4492,0.0508],0.8857],"neuru_front":[[0.3588,0.2502,0.043],[0.6423,0.2516,0.042],"#dfccac",[0.5006,0.3164,0.0918],0.8857],"neuru_side":[[0.5166,0.2448,0.041],[0.7634,0.238,0.041],"#e9d5b3",[0.64,0.3066,0.0723],0.8857],"noeul_front":[[0.4456,0.4063,0.0391],[0.6851,0.405,0.0381],"#f8c49c",[0.5654,0.4785,0.0879],0.8857],"noeul_side":[[0.6054,0.406,0.0391],[0.8062,0.4054,0.0332],"#fccba1",[0.7058,0.4766,0.0645],0.8857],"nuri_front":[[0.3779,0.3261,0.041],[0.6228,0.3231,0.041],"#c09478",[0.5004,0.4062,0.1055],0.8857],"nuri_side":[[0.5253,0.312,0.041],[0.7378,0.298,0.04],"#c89b7e",[0.6316,0.3828,0.0703],0.8857],"poljjak_front":[[0.3034,0.1179,0.0537],[0.6993,0.1148,0.0518],"#d2cd8c",[0.5013,0.3086,0.1602],0.8857],"poljjak_side":[[0.3723,0.1254,0.0537],[0.7149,0.1062,0.0498],"#d3cc89",[0.5436,0.3047,0.0625],0.8857],"posil_front":[[0.3935,0.3629,0.0371],[0.6451,0.3662,0.0352],"#fae1cb",[0.5193,0.4219,0.0859],0.8857],"posil_side":[[0.4912,0.3586,0.0342],[0.714,0.3612,0.0303],"#fde7d2",[0.6026,0.418,0.0723],0.8857],"saerok_front":[[0.3812,0.3943,0.04],[0.6445,0.3952,0.04],"#f5d3b4",[0.5129,0.457,0.0957],0.8857],"saerok_side":[[0.5726,0.3954,0.04],[0.7875,0.3917,0.0371],"#fbd8b8",[0.6801,0.4551,0.0684],0.8857],"solsol_front":[[0.2331,0.3183,0.042],[0.4914,0.3193,0.042],"#d39671",[0.3623,0.502,0.0781],0.8857],"solsol_side":[[0.4628,0.3227,0.043],[0.6901,0.3252,0.041],"#dd9f77",[0.5765,0.3867,0.0762],0.8857],"somsom_front":[[0.3406,0.3923,0.0381],[0.5776,0.3879,0.0381],"#f4ddcb",[0.4591,0.4473,0.0938],0.8857],"somsom_side":[[0.469,0.4182,0.0342],[0.6734,0.4032,0.0303],"#fbe4d0",[0.5712,0.4629,0.0703],0.8857]};
+/* 얼굴: 눈 깜빡임·표정·입 움직임 (그림 위에 덧그림) */
+function feltFace(g,F,Hs,mood,ci,mv,t){const P=(x,y)=>[-Hs/2+x*Hs,-Hs+y*Hs],sk=F[2];
+ const now=performance.now()/1000,blink=((now+ci*.73)%3.4)<.13;
+ let eyes=blink?'shut':mood==='happy'||mood==='lol'?'arc':mood==='hurt'?'x':null;
+ g.save();g.lineCap='round';g.lineJoin='round';g.strokeStyle='#2b2220';
+ for(const [i,e] of F.slice(0,2).entries()){const [x,y]=P(e[0],e[1]),r=e[2]*Hs;
+  if(eyes){g.beginPath();g.ellipse(x,y,r*1.3,r*1.3,0,0,TAU);g.fillStyle=sk;g.fill();g.lineWidth=Math.max(1,r*.38);g.beginPath();
+   if(eyes==='shut'){g.moveTo(x-r*.95,y+r*.1);g.quadraticCurveTo(x,y+r*.7,x+r*.95,y+r*.1)}
+   else if(eyes==='arc'){g.moveTo(x-r*.9,y+r*.35);g.quadraticCurveTo(x,y-r*.85,x+r*.9,y+r*.35)}
+   else{const d=i?-1:1;g.moveTo(x-r*.8*d,y-r*.7);g.lineTo(x+r*.7*d,y);g.lineTo(x-r*.8*d,y+r*.7)}
+   g.stroke()}
+  if(mood==='angry'){g.lineWidth=Math.max(1.2,r*.45);g.beginPath();const d=i?-1:1;g.moveTo(x-r*1.1*d,y-r*1.9);g.lineTo(x+r*.9*d,y-r*1.35);g.stroke()}
+ }
+ const [mx,my]=P(F[3][0],F[3][1]),mw=Math.max(F[3][2]*Hs,F[0][2]*Hs*1.6);
+ const talk=mood==='happy'||mood==='lol'||mood==='angry'||mood==='scared'?1:mv?.35:0;
+ if(talk){const o=(mood==='lol'?.75+.25*Math.abs(Math.sin(now*14)):mood==='scared'?.55:mv?.3+.3*Math.abs(Math.sin(t*7)):.7)*talk;
+  const w=mw*(mood==='scared'?.45:.6),h=Math.max(1,mw*.55*o);
+  g.beginPath();g.ellipse(mx,my+h*.35,w/2,h/2+.5,0,0,TAU);g.fillStyle='#6b2a2a';g.fill();
+  g.save();g.clip();g.beginPath();g.ellipse(mx,my+h*.85,w*.32,h*.38,0,0,TAU);g.fillStyle='#f08a96';g.fill();g.restore()}
+ if(mood==='scared'||mood==='hurt'){const [x,y]=P(F[1][0]+F[1][2]*2.6,F[1][1]-F[1][2]*1.2),r=F[1][2]*Hs*.75;g.beginPath();g.moveTo(x,y-r*1.4);g.quadraticCurveTo(x+r,y,x,y+r);g.quadraticCurveTo(x-r,y,x,y-r*1.4);g.fillStyle='#8fd3ff';g.fill()}
+ g.restore()}
 function drawFelt(g,ci,R,t,mv,mood,C){
- const id=CHARS[ci].id,im=charImg(id,mv?'side':'front'),sw=mv?Math.sin(t*14):0,bob=mv?Math.abs(Math.sin(t*14))*R*.08:Math.sin(t*2.2)*R*.015;
+ const id=CHARS[ci].id,view=mv?'side':'front',im=charImg(id,view),F=FACE[id+'_'+view];
+ const ph=t*12,sw=mv?Math.sin(ph):0,bob=mv?Math.abs(Math.sin(ph))*R*.09:Math.sin(t*2.2)*R*.02;
  const Hs=R*2.9,hy=R*.98-Hs*.64,hr=Hs*.21;
- ell(g,0,R*.98,R*.62,R*.16,'rgba(30,60,90,.22)');
- g.save();g.translate(0,-bob);
- if(C.back&&C.back!=='none'){g.save();g.translate(0,-R*.1);drawBack(g,C.back,R,t);g.restore()}
- g.translate(0,R*.98);g.rotate(sw*.06);
- const sq=mood==='hurt'?.9:1+(mv?Math.abs(sw)*.03:0);g.scale(1/Math.sqrt(sq),sq);
- if(im.complete&&im.naturalWidth)g.drawImage(im,-Hs/2,-Hs,Hs,Hs);
+ ell(g,0,R*.98,R*.62*(1-bob/R*.6),R*.16,'rgba(30,60,90,.22)');
+ if(C.back&&C.back!=='none'){g.save();g.translate(0,-bob-R*.1);drawBack(g,C.back,R,t);g.restore()}
+ if(!(im.complete&&im.naturalWidth)){return}
+ const iw=im.naturalWidth,ih=im.naturalHeight,fl=F?F[4]:.9,cut=Math.round(ih*fl);
+ g.save();g.translate(0,R*.98);
+ const lift=Hs*.05,ov=Math.round(ih*.05);
+ /* 몸통: 걸을 때 좌우로 흔들고 위아래로 통통 */
+ g.save();g.translate(0,-Hs*(1-fl)-bob);g.rotate(sw*.07+(mood==='hurt'?Math.sin(performance.now()/40)*.06:0));
+ const sq=mv?1+Math.abs(sw)*.035:1+Math.sin(t*2.2)*.012;g.scale(1/Math.sqrt(sq),sq);g.translate(0,Hs*(1-fl));
+ g.drawImage(im,0,0,iw,cut,-Hs/2,-Hs,Hs,Hs*fl);
+ if(F)feltFace(g,F,Hs,mood||'',ci,mv,t);
+ g.restore();
+ /* 다리: 발 부분을 좌우로 나눠 번갈아 들어올림 (몸 위에 겹쳐 이음새 가림) */
+ const c0=cut-ov,f0=c0/ih;
+ for(const side of[0,1]){const sx=side?iw/2:0,lf=mv?Math.max(0,side?-sw:sw)*lift:0,fx=mv?(side?1:-1)*sw*Hs*.012:0;
+  g.drawImage(im,sx,c0,iw/2,ih-c0,-Hs/2+(side?Hs/2:0)+fx,-Hs+Hs*f0-lf-bob*.4,Hs/2,Hs*(1-f0))}
  g.restore();
  if(C.hat&&C.hat!=='none'){g.save();g.translate(0,-bob);g.lineWidth=Math.max(1.3,R*.075);drawHat(g,C.hat,hr,hy,1.05);g.restore()}
 }
