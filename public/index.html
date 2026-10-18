@@ -327,23 +327,28 @@ const SPCD={spin:12,thunder:16,wind:12,sweep:16,guard:15,rain:13,magnet:14,roar:
 const RARCD=[0,0,1,2,4],spcd=c=>SPCD[c.sp]+RARCD[c.rar];
 const STN=['속도','공격','범위','방어'],STC=['#2f9ee0','#e0364c','#7b4fd6','#2f9e5a'];
 const CHARS=[
- {id:'king',name:'꼬마임금',rar:0,prob:0,w:'boom',wn:'부메랑',wc:['#ffc23a','#b3121f'],st:[3,3,3,3],dg:'dash',dd:210,sp:'spin',tag:'균형형',v:{w:'triangle',m:[72,76,79]}},
- {id:'peng',name:'펭귄 집배원',rar:0,prob:0,w:'boom',wn:'파란 부메랑',wc:['#8ee6ff','#1f6fb2'],st:[3,2,4,3],dg:'roll',dd:170,sp:'magnet',tag:'수집형',v:{w:'square',m:[84,88,84]}},
- {id:'curl',name:'뽀글이 할매',rar:1,prob:12,w:'ladle',wn:'국자',wc:['#f2f5fa','#8792a6'],st:[4,3,2,3],dg:'dash',dd:235,sp:'roar',spn:'잔소리',tag:'스피드형',v:{w:'triangle',m:[67,64,67,71]}},
- {id:'cat',name:'닌자 고양이',rar:1,prob:12,w:'shuri',wn:'표창',wc:['#e9eef5','#5b6677'],st:[5,2,3,2],dg:'blink',dd:260,sp:'rain',tag:'기습형',v:{w:'sine',m:[79,84,79],gl:1}},
- {id:'goblin',name:'도깨비',rar:1,prob:12,w:'club',wn:'도깨비 방망이',wc:['#d99a55','#6b3e1e'],st:[2,5,2,3],dg:'charge',dd:300,sp:'roar',spn:'뚝딱!',tag:'힘형',v:{w:'sawtooth',m:[48,52,55]}},
- {id:'panda',name:'판다 요리사',rar:1,prob:12,w:'pan',wn:'프라이팬',wc:['#5a606c','#1e2128'],st:[2,3,3,4],dg:'roll',dd:160,sp:'magnet',spn:'냠냠',tag:'탱커형',v:{w:'sine',m:[60,57,60]}},
- {id:'liubei',name:'유비',rar:2,prob:7,w:'sword',wn:'쌍고검',wc:['#f2f6ff','#8aa0c8'],st:[3,3,3,3],dg:'dash',dd:220,sp:'guard',spn:'인덕',tag:'균형형',v:{w:'triangle',m:[69,74,76],gong:1}},
- {id:'caocao',name:'조조',rar:2,prob:7,w:'sword',wn:'의천검',wc:['#efe4ff','#7b5bb0'],st:[3,4,3,2],dg:'dash',dd:220,sp:'rain',spn:'화살비',tag:'공격형',v:{w:'square',m:[70,66,63],gong:1}},
- {id:'knight',name:'강철 기사',rar:2,prob:7,w:'shield',wn:'방패',wc:['#dfe6f0','#3a5f9e'],st:[2,3,3,4],dg:'roll',dd:180,sp:'guard',tag:'탱커형',v:{w:'square',m:[55,62,67]}},
- {id:'wizard',name:'별빛 마법사',rar:2,prob:7,w:'star',wn:'별',wc:['#fff6b0','#f0a800'],st:[3,3,4,2],dg:'blink',dd:320,sp:'thunder',spn:'별똥별',tag:'원거리형',v:{w:'sine',m:[88,91,96,100]}},
- {id:'guanyu',name:'관우',rar:3,prob:5,w:'glaive',wn:'청룡언월도',wc:['#a8f5c8','#1f7a4a'],st:[2,5,3,2],dg:'charge',dd:320,sp:'sweep',spn:'청룡참',tag:'파워형',v:{w:'sawtooth',m:[57,64,69],gong:1}},
- {id:'zhangfei',name:'장비',rar:3,prob:5,w:'spear',wn:'장팔사모',wc:['#eceff3','#555c66'],st:[2,5,2,3],dg:'charge',dd:360,sp:'roar',spn:'장판교 호통',tag:'돌격형',v:{w:'sawtooth',m:[45,45,52],gong:1}},
- {id:'zhaoyun',name:'조운',rar:3,prob:5,w:'spear',wn:'은빛 창',wc:['#ffffff','#9fb6d6'],st:[5,3,2,2],dg:'dash',dd:240,ch2:1,sp:'spin',spn:'칠진칠출',tag:'스피드형',v:{w:'triangle',m:[76,81,88],gong:1}},
- {id:'zhuge',name:'제갈량',rar:3,prob:5,w:'fan',wn:'깃털 부채',wc:['#ffffff','#b8c4d6'],st:[3,3,4,2],dg:'blink',dd:300,sp:'wind',spn:'동남풍',tag:'전략형',v:{w:'sine',m:[74,79,83,86],gong:1}},
- {id:'lubu',name:'여포',rar:4,prob:1.5,w:'halberd',wn:'방천화극',wc:['#ffe08a','#c0392b'],st:[4,4,2,2],dg:'charge',dd:340,sp:'sweep',spn:'무쌍',tag:'최강 공격형',v:{w:'sawtooth',m:[52,59,64,71],gong:1}},
- {id:'viking',name:'천둥 바이킹',rar:4,prob:1.5,w:'hammer',wn:'천둥 망치',wc:['#e3ebf7','#6b7a90'],st:[2,4,3,3],dg:'charge',dd:260,sp:'thunder',tag:'번개형',v:{w:'sawtooth',m:[43,50,55]}},
- {id:'haetae',name:'황금 해태',rar:4,prob:1,w:'boom',wn:'황금 부메랑',wc:['#fff3a0','#d18b00'],st:[4,3,3,2],dg:'blink',dd:280,sp:'spin',spn:'황금 회오리',tag:'만능형',v:{w:'triangle',m:[76,83,88,95]}},
+ {id:'gyulnyang',name:'귤냥',rar:0,prob:0,w:'boom',wn:'부메랑',wc:['#ffc23a','#e07a1f'],st:[3,3,3,3],dg:'dash',dd:210,sp:'spin',tag:'균형형',v:{w:'triangle',m:[72,76,79]}},
+ {id:'kongkong',name:'콩콩',rar:0,prob:0,w:'boom',wn:'해바라기 부메랑',wc:['#fff08a','#c99a1f'],st:[3,2,4,3],dg:'roll',dd:170,sp:'magnet',tag:'수집형',v:{w:'square',m:[84,88,84]}},
+ {id:'kkulbom',name:'꿀봄',rar:1,prob:7,w:'ladle',wn:'나무 국자',wc:['#e8c08a','#9a6a3a'],st:[4,3,2,3],dg:'dash',dd:235,sp:'roar',spn:'밥 먹자!',tag:'스피드형',v:{w:'triangle',m:[67,64,67,71]}},
+ {id:'somsom',name:'솜솜',rar:1,prob:7,w:'shuri',wn:'솜 표창',wc:['#ffffff','#8fb3e0'],st:[5,2,3,2],dg:'blink',dd:260,sp:'rain',spn:'솜사탕비',tag:'기습형',v:{w:'sine',m:[79,84,79],gl:1}},
+ {id:'dotori',name:'도토리',rar:1,prob:7,w:'club',wn:'도토리 방망이',wc:['#c98a4a','#6b3e1e'],st:[2,5,2,3],dg:'charge',dd:300,sp:'roar',spn:'쿵쾅!',tag:'힘형',v:{w:'sawtooth',m:[48,52,55]}},
+ {id:'bori',name:'보리',rar:1,prob:7,w:'pan',wn:'빵 쟁반',wc:['#e0a85a','#7a4a22'],st:[2,3,3,4],dg:'roll',dd:160,sp:'magnet',spn:'갓 구운 빵',tag:'탱커형',v:{w:'sine',m:[60,57,60]}},
+ {id:'dongdong',name:'동동',rar:1,prob:7,w:'boom',wn:'우산 부메랑',wc:['#b58ad0','#5e3a7a'],st:[3,2,3,4],dg:'roll',dd:170,sp:'guard',spn:'우산 펼치기',tag:'방어형',v:{w:'square',m:[76,79,76]}},
+ {id:'poljjak',name:'폴짝',rar:1,prob:7,w:'boom',wn:'농구공 부메랑',wc:['#ff9a4a','#c0501a'],st:[4,3,3,2],dg:'dash',dd:240,sp:'spin',spn:'덩크슛',tag:'스피드형',v:{w:'triangle',m:[74,79,74]}},
+ {id:'posil',name:'포실',rar:1,prob:7,w:'fan',wn:'피리 바람',wc:['#fff3d6','#c9a46a'],st:[3,3,4,2],dg:'blink',dd:280,sp:'wind',spn:'피리 소리',tag:'원거리형',v:{w:'sine',m:[81,84,88]}},
+ {id:'nuri',name:'누리',rar:1,prob:7,w:'hammer',wn:'나무 망치',wc:['#e8c08a','#8a5a2e'],st:[2,4,3,3],dg:'charge',dd:280,sp:'sweep',spn:'뚝딱뚝딱',tag:'파워형',v:{w:'sawtooth',m:[50,55,57]}},
+ {id:'bamtol',name:'밤톨',rar:2,prob:4.5,w:'shuri',wn:'가시 표창',wc:['#c9a07a','#6b4a2e'],st:[4,3,3,2],dg:'blink',dd:260,sp:'rain',spn:'가시비',tag:'기습형',v:{w:'sine',m:[79,83,86],gl:1}},
+ {id:'chalrang',name:'찰랑',rar:2,prob:4.5,w:'fan',wn:'물뿌리개 물줄기',wc:['#a8e6e0','#3a8a9e'],st:[3,3,4,2],dg:'dash',dd:230,sp:'wind',spn:'물벼락',tag:'전략형',v:{w:'triangle',m:[72,77,81]}},
+ {id:'moa',name:'모아',rar:2,prob:4.5,w:'ladle',wn:'찻숟가락',wc:['#cfe9dc','#5e9a80'],st:[2,3,3,4],dg:'roll',dd:170,sp:'guard',spn:'따뜻한 차',tag:'탱커형',v:{w:'sine',m:[67,71,74]}},
+ {id:'damdam',name:'담담',rar:2,prob:4.5,w:'shield',wn:'책 방패',wc:['#e05a5a','#8a1f2a'],st:[2,3,3,4],dg:'roll',dd:180,sp:'guard',spn:'공부 시간',tag:'탱커형',v:{w:'square',m:[55,62,67]}},
+ {id:'noeul',name:'노을',rar:2,prob:4.5,w:'star',wn:'편지',wc:['#fff6dc','#e0904a'],st:[3,3,4,2],dg:'blink',dd:300,sp:'thunder',spn:'편지 폭탄',tag:'원거리형',v:{w:'sine',m:[88,91,96]}},
+ {id:'ipsae',name:'잎새',rar:2,prob:4.5,w:'star',wn:'플래시',wc:['#ffffff','#9aa6b8'],st:[3,4,3,2],dg:'dash',dd:220,sp:'thunder',spn:'찰칵!',tag:'공격형',v:{w:'square',m:[70,74,77]}},
+ {id:'solsol',name:'솔솔',rar:3,prob:3.5,w:'spear',wn:'나뭇가지 창',wc:['#c9a46a','#6b4a22'],st:[5,3,2,2],dg:'dash',dd:240,ch2:1,sp:'spin',spn:'숲길 질주',tag:'스피드형',v:{w:'triangle',m:[76,81,88]}},
+ {id:'saerok',name:'새록',rar:3,prob:3.5,w:'sword',wn:'돋보기 검',wc:['#f6e8ff','#9a6ac0'],st:[3,4,3,2],dg:'dash',dd:230,sp:'rain',spn:'찾았다!',tag:'공격형',v:{w:'sine',m:[74,79,83,86]}},
+ {id:'binggeul',name:'빙글',rar:3,prob:3.5,w:'spear',wn:'얼음 창',wc:['#e8f6ff','#5a8ac0'],st:[2,5,2,3],dg:'charge',dd:340,sp:'roar',spn:'눈보라',tag:'돌격형',v:{w:'sawtooth',m:[57,64,69]}},
+ {id:'neuru',name:'느루',rar:3,prob:3.5,w:'glaive',wn:'스패너',wc:['#e3ebf7','#6b7a90'],st:[2,5,3,2],dg:'charge',dd:320,sp:'sweep',spn:'등껍질 회전',tag:'파워형',v:{w:'sawtooth',m:[45,50,55]}},
+ {id:'byeolbam',name:'별밤',rar:4,prob:1.5,w:'star',wn:'별',wc:['#fff6b0','#f0a800'],st:[3,4,3,2],dg:'blink',dd:320,sp:'thunder',spn:'별똥별',tag:'최강 원거리형',v:{w:'sine',m:[88,91,96,100]}},
+ {id:'kori',name:'코리',rar:4,prob:1.5,w:'boom',wn:'황금 부메랑',wc:['#fff3a0','#d18b00'],st:[4,3,3,2],dg:'blink',dd:280,sp:'spin',spn:'물대포 회오리',tag:'만능형',v:{w:'triangle',m:[76,83,88,95]}},
 ];
 const CI={};CHARS.forEach((c,i)=>CI[c.id]=i);
 const spName=c=>c.spn||SPN[c.sp];
@@ -357,19 +362,21 @@ const SUITS=[{id:'none',name:'없음',cost:0},{id:'bear',name:'곰돌이 탈',co
 const COLS=[{id:'none',name:'기본',cost:0},{id:'red',name:'빨강',cost:50,c:'#e0364c'},{id:'blue',name:'파랑',cost:50,c:'#2f6fd6'},{id:'green',name:'초록',cost:50,c:'#2f9e5a'},{id:'purple',name:'보라',cost:50,c:'#7b4fd6'},{id:'pink',name:'분홍',cost:50,c:'#ff7ab8'},{id:'black',name:'검정',cost:80,c:'#2a2a33'},{id:'white',name:'하양',cost:80,c:'#f4f6fa'},{id:'gold',name:'황금',cost:200,c:'#e8b71f'},{id:'mint',name:'민트',cost:60,c:'#4fd1b5'}];
 const TRAILS=[{id:'ghost',name:'잔상',cost:0},{id:'fire',name:'불꽃',cost:100},{id:'star',name:'별가루',cost:100},{id:'heart',name:'하트',cost:150},{id:'bolt',name:'번개',cost:150},{id:'rainbow',name:'무지개',cost:250},{id:'bubble',name:'비눗방울',cost:120},{id:'note',name:'음표',cost:120},{id:'snow',name:'눈송이',cost:120},{id:'petal',name:'꽃잎',cost:150}];
 const CATS=[['hat','모자',HATS],['face','얼굴',FACES],['back','등 장식',BACKS],['suit','인형탈',SUITS],['col','옷 색',COLS],['trail','대시 효과',TRAILS]];
+const SHOPCATS=CATS.filter(([k])=>k==='hat'||k==='back'||k==='trail');
 const CL={};CATS.forEach(([k,,l])=>CL[k]=l);const TI={};TRAILS.forEach((t,i)=>TI[t.id]=i);
 const NOCOS={hat:'none',face:'none',back:'none',suit:'none',col:'none'};
 const encCos=c=>['hat','face','back','suit','col'].map(k=>Math.max(0,CL[k].findIndex(x=>x.id===((c||{})[k]||'none')))).join('.');
 const decCos=str=>{const a=String(str||'').split('.').map(n=>n|0),o={};['hat','face','back','suit','col'].forEach((k,i)=>o[k]=(CL[k][a[i]]||CL[k][0]).id);return o};
-const randCos=()=>{const o={};for(const k of['hat','face','back','suit','col'])o[k]=Math.random()<(k==='suit'?.15:.35)?pick(CL[k]).id:'none';return o};
+const randCos=()=>{const o={};for(const k of['hat','face','back','suit','col'])o[k]=(k==='hat'||k==='back')&&Math.random()<.35?pick(CL[k]).id:'none';return o};
 const NAMES=['얼음공주','눈사람킹','부메랑장인','고드름','펭순이','썰매왕','빙수대장','눈송이','털모자','북극곰','동장군','함박눈','얼음땡','눈보라','스노우볼','빙판왕','호빵맨','군고구마','붕어빵','꽁꽁이'];
 
 /* ================= 저장 & 기록 ================= */
-const DEF={coins:300,owned:['king','peng'],sel:'king',cos:{hat:'none',face:'none',back:'none',suit:'none',col:'none'},own:{hat:['none'],face:['none'],back:['none'],suit:['none'],col:['none']},trails:['ghost'],trail:'ghost',name:'',music:true,sfx:true,set:{dur:180,bots:9,map:5500},rec:{games:0,wins:0,top3:0,bestW:0,bestK:0,totalK:0,chars:{},recent:[]}};
+const DEF={coins:300,owned:['gyulnyang','kongkong'],sel:'gyulnyang',cos:{hat:'none',face:'none',back:'none',suit:'none',col:'none'},own:{hat:['none'],face:['none'],back:['none'],suit:['none'],col:['none']},trails:['ghost'],trail:'ghost',name:'',music:true,sfx:true,set:{dur:180,bots:9,map:5500},rec:{games:0,wins:0,top3:0,bestW:0,bestK:0,totalK:0,chars:{},recent:[]}};
 let S=JSON.parse(JSON.stringify(DEF));
 try{const s=JSON.parse(localStorage.getItem('boomerang_v2')||'null');if(s){S=Object.assign(S,s);S.rec=Object.assign(JSON.parse(JSON.stringify(DEF.rec)),s.rec||{});S.set=Object.assign({},DEF.set,s.set||{})}}catch(e){}
 try{const o=JSON.parse(localStorage.getItem('boomerang_save_v1')||'null');if(o&&!S.mig){S.coins+=o.coins||0;S.mig=1}}catch(e){}
-if(!CHARS.some(c=>c.id===S.sel))S.sel='king';
+S.owned=(S.owned||[]).filter(id=>CHARS.some(c=>c.id===id));for(const id of DEF.owned)if(!S.owned.includes(id))S.owned.push(id);
+if(!CHARS.some(c=>c.id===S.sel))S.sel='gyulnyang';
 S.cos=Object.assign({},NOCOS,S.cos||{});S.own=Object.assign({hat:['none'],face:['none'],back:['none'],suit:['none'],col:['none']},S.own||{});
 if(S.hats){for(const h of S.hats)if(!S.own.hat.includes(h))S.own.hat.push(h);if(S.hat)S.cos.hat=S.hat;delete S.hats;delete S.hat}
 function save(){try{localStorage.setItem('boomerang_v2',JSON.stringify(S))}catch(e){}}
@@ -645,8 +652,25 @@ function suitFront(g,su,hr,hy){const c=SUITC[su];g.save();g.strokeStyle=INK;
  if(su==='unicorn'){g.beginPath();g.moveTo(-hr*.14,hy-hr*1.05);g.lineTo(0,hy-hr*1.75);g.lineTo(hr*.14,hy-hr*1.05);g.closePath();g.fillStyle='#ffd23f';g.fill();g.stroke()}
  if(su==='chick'){g.beginPath();g.moveTo(-hr*.12,hy-hr*1.18);g.lineTo(0,hy-hr*1.32);g.lineTo(hr*.12,hy-hr*1.18);g.closePath();g.fillStyle='#ff8a3d';g.fill()}
  g.restore()}
+/* ================= 말랑 친구들 그림 (펠트 인형 그림 그대로) ================= */
+const IMG={};let imgLeft=0;
+function charImg(id,v){const k=id+'_'+v;if(!IMG[k]){const im=new Image();imgLeft++;im.onload=im.onerror=()=>{if(--imgLeft===0){try{renderChars()}catch(e){}try{renderGacha()}catch(e){}}};im.src='chars/'+k+'.webp';IMG[k]=im}return IMG[k]}
+CHARS.forEach(c=>{charImg(c.id,'front');charImg(c.id,'side')});
+function drawFelt(g,ci,R,t,mv,mood,C){
+ const id=CHARS[ci].id,im=charImg(id,mv?'side':'front'),sw=mv?Math.sin(t*14):0,bob=mv?Math.abs(Math.sin(t*14))*R*.08:Math.sin(t*2.2)*R*.015;
+ const Hs=R*2.9,hy=R*.98-Hs*.64,hr=Hs*.21;
+ ell(g,0,R*.98,R*.62,R*.16,'rgba(30,60,90,.22)');
+ g.save();g.translate(0,-bob);
+ if(C.back&&C.back!=='none'){g.save();g.translate(0,-R*.1);drawBack(g,C.back,R,t);g.restore()}
+ g.translate(0,R*.98);g.rotate(sw*.06);
+ const sq=mood==='hurt'?.9:1+(mv?Math.abs(sw)*.03:0);g.scale(1/Math.sqrt(sq),sq);
+ if(im.complete&&im.naturalWidth)g.drawImage(im,-Hs/2,-Hs,Hs,Hs);
+ g.restore();
+ if(C.hat&&C.hat!=='none'){g.save();g.translate(0,-bob);g.lineWidth=Math.max(1.3,R*.075);drawHat(g,C.hat,hr,hy,1.05);g.restore()}
+}
 function drawChar(g,ci,R,t,mv,mood,cos){
- const C=typeof cos==='string'?{hat:cos}:(cos||{});const su=C.suit&&C.suit!=='none'?C.suit:null;
+ const C=typeof cos==='string'?{hat:cos}:(cos||{});
+ if(!LOOK[CHARS[ci].id]){g.lineJoin='round';g.lineCap='round';g.strokeStyle=INK;return drawFelt(g,ci,R,t,mv,mood,C)}const su=C.suit&&C.suit!=='none'?C.suit:null;
  const id=CHARS[ci].id,L=LOOK[id],sw=mv?Math.sin(t*14):0,bob=mv?Math.abs(Math.sin(t*14))*R*.07:0;
  const colv=C.col&&C.col!=='none'?(COLS.find(x=>x.id===C.col)||{}).c:null,BD=su?SUITC[su]:(colv||L.bd);
  g.lineJoin='round';g.lineCap='round';g.lineWidth=Math.max(1.3,R*.075);g.strokeStyle=INK;
@@ -1197,7 +1221,7 @@ function ownList(cat){return cat==='trail'?S.trails:S.own[cat]}
 function curOf(cat){return cat==='trail'?S.trail:S.cos[cat]}
 function setCur(cat,id){if(cat==='trail')S.trail=id;else S.cos[cat]=id}
 function renderShop(){document.querySelectorAll('.coinV').forEach(e=>e.textContent=S.coins);
- const tabs=$('shopTabs');tabs.innerHTML='';for(const [k,nm] of CATS){const b=document.createElement('button');b.type='button';b.textContent=nm;b.className=shopTab===k?'on':'';b.onclick=()=>{shopTab=k;tryId=null;sfx('ui');renderShop()};tabs.appendChild(b)}
+ const tabs=$('shopTabs');tabs.innerHTML='';for(const [k,nm] of SHOPCATS){const b=document.createElement('button');b.type='button';b.textContent=nm;b.className=shopTab===k?'on':'';b.onclick=()=>{shopTab=k;tryId=null;sfx('ui');renderShop()};tabs.appendChild(b)}
  const list=CL[shopTab],own=ownList(shopTab),cur=curOf(shopTab);const box=$('shopItems');box.innerHTML='';
  for(const it of list){const has=own.includes(it.id);const b=document.createElement('button');b.type='button';b.className='item'+(cur===it.id?' eq':'')+(tryId===it.id&&cur!==it.id?' try':'');
   b.innerHTML=`<canvas width="120" height="120"></canvas><span class="nm">${it.name}</span><span class="pr">${cur===it.id?'장착 중':has?'보유':`<span class="coin"></span>${PRICE(it.cost)}`}</span>`;
